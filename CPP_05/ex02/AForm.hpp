@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 21:17:21 by moduwole          #+#    #+#             */
-/*   Updated: 2023/10/30 23:37:11 by moduwole         ###   ########.fr       */
+/*   Created: 2023/10/30 02:10:46 by moduwole          #+#    #+#             */
+/*   Updated: 2023/11/01 01:21:00 by moduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-#define FORM_HPP
+#ifndef AFORM_HPP
+#define AFORM_HPP
 
 #include "Bureaucrat.hpp"
+#include <iostream>
+#include <cstdlib>
+#include <fstream>
 
 class Bureaucrat;
 
-class Form
+class AForm
 {
 private:
     std::string const   _name;
@@ -26,12 +29,12 @@ private:
     int const           _gradeToExec;
 
 public:
-    Form();
-    Form(std::string name, int gts, int gte);
-    Form(Form const &other);
-    ~Form();
+    AForm();
+    AForm(std::string name, int gts, int gte);
+    AForm(AForm const &other);
+    virtual ~AForm();
 
-    Form &	operator=(Form const & obj);
+    AForm &	operator=(AForm const & obj);
 
     class GradeTooHighException : public std::exception
     {
@@ -42,15 +45,20 @@ public:
     {
         virtual const char *what() const throw();
     };
+    class FormNotSignedException: public std::exception
+    {
+        virtual const char *what() const throw();
+    };
 
     std::string     getName(void) const;
-    bool             getSigned(void) const;    
+    bool            getSigned(void) const;    
+    void            setSigned(bool sign);
     int             getGradeToSign(void) const;    
     int             getGradeToExec(void) const;
-
+    virtual void    execute(Bureaucrat const &executor) const = 0;
     void            beSigned(Bureaucrat const &obj);
 };
 
-std::ostream     &operator<<(std::ostream &o, Form const &obj);
+std::ostream     &operator<<(std::ostream &o, AForm const &obj);
 
 #endif

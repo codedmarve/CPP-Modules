@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/27 23:10:17 by moduwole          #+#    #+#             */
-/*   Updated: 2023/10/30 03:06:55 by moduwole         ###   ########.fr       */
+/*   Created: 2023/10/30 02:44:17 by moduwole          #+#    #+#             */
+/*   Updated: 2023/10/31 02:02:15 by moduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,20 @@ void    Bureaucrat::decrementGrade()
     } 
 }
 
+void Bureaucrat::executeForm(AForm const &form)
+{
+    try
+    {
+        form.execute(*this);
+        std::cout << this->getName() << " executed " << form.getName() << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << "execution by " << this->_name << " failed w.msg: "<< e.what() << std::endl;
+    }
+    
+}
+
 const char *	Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return (": grade can not be higher than 1\n");
@@ -109,7 +123,7 @@ const char *	Bureaucrat::GradeTooLowException::what() const throw()
 	return (": grade can not be lower that 150\n");
 }
 
-void    Bureaucrat::signForm(Form &form) const
+void    Bureaucrat::signForm(AForm &form) const
 {
     try
     {
