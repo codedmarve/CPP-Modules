@@ -6,7 +6,7 @@
 /*   By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 02:20:26 by moduwole          #+#    #+#             */
-/*   Updated: 2023/11/01 02:22:36 by moduwole         ###   ########.fr       */
+/*   Updated: 2023/11/03 16:18:21 by moduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ public:
 	RobotomyRequestForm(void);
 	~RobotomyRequestForm(void);
 	RobotomyRequestForm(std::string target);
-	RobotomyRequestForm(RobotomyRequestForm const &src);
+	RobotomyRequestForm(RobotomyRequestForm const &obj);
 
-	RobotomyRequestForm & operator=(RobotomyRequestForm const &rhs);
+	RobotomyRequestForm & operator=(RobotomyRequestForm const &that);
 
 	std::string getTarget() const;
 	void	execute(Bureaucrat const & executor) const;
@@ -35,7 +35,7 @@ public:
 	{
 		virtual const char *what() const throw()
 		{
-			return ("You weren't lucky. ");
+			return ("Ohh noooo... ");
 		}
 	};
 };

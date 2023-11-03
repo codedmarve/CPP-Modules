@@ -6,7 +6,7 @@
 /*   By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 01:53:50 by moduwole          #+#    #+#             */
-/*   Updated: 2023/10/30 01:14:33 by moduwole         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:03:46 by moduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)
 
 Bureaucrat::Bureaucrat(Bureaucrat const &other) : _name(other.getName()),  _grade(other._grade)
 {
-    std::cout << _name << " is now also available here" << std::endl;
+    std::cout << _name << " is now also available" << std::endl;
 }
 
 Bureaucrat::~Bureaucrat()

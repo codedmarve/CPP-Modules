@@ -6,7 +6,7 @@
 /*   By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 02:44:17 by moduwole          #+#    #+#             */
-/*   Updated: 2023/10/31 02:02:15 by moduwole         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:10:20 by moduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)
 
 Bureaucrat::Bureaucrat(Bureaucrat const &other) : _name(other.getName()),  _grade(other._grade)
 {
-    std::cout << _name << " is now also available here" << std::endl;
+    std::cout << _name << " is now also available" << std::endl;
 }
 
 Bureaucrat::~Bureaucrat()
@@ -108,7 +108,7 @@ void Bureaucrat::executeForm(AForm const &form)
     }
     catch(const std::exception& e)
     {
-        std::cerr << "execution by " << this->_name << " failed w.msg: "<< e.what() << std::endl;
+        std::cerr << "Execution by " << this->_name << " failed with message "<< e.what() << std::endl;
     }
     
 }

@@ -6,7 +6,7 @@
 #    By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 01:31:58 by moduwole          #+#    #+#              #
-#    Updated: 2023/11/01 01:32:23 by moduwole         ###   ########.fr        #
+#    Updated: 2023/11/04 00:01:27 by moduwole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ clean:
 
 fclean: clean
 	rm -rf $(NAME)
+	rm -rf $(wildcard *_shrubbery)
 
 re: fclean all
 

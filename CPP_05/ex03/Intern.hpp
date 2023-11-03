@@ -6,7 +6,7 @@
 /*   By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 03:21:42 by moduwole          #+#    #+#             */
-/*   Updated: 2023/11/01 03:23:35 by moduwole         ###   ########.fr       */
+/*   Updated: 2023/11/03 23:16:36 by moduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Intern {
 		Intern(Intern const &src);
 		Intern &operator=(Intern const &rhs);
 
-		AForm	*makeForm(std::string form_name, std::string target);
+		AForm	*makeForm(std::string forName, std::string target);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 02:20:28 by moduwole          #+#    #+#             */
-/*   Updated: 2023/11/01 02:22:43 by moduwole         ###   ########.fr       */
+/*   Updated: 2023/11/03 16:28:28 by moduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
 public:
 	PresidentialPardonForm();
 	PresidentialPardonForm(std::string target);
-	PresidentialPardonForm(PresidentialPardonForm const &src);
+	PresidentialPardonForm(PresidentialPardonForm const &that);
 	~PresidentialPardonForm();
 
 	PresidentialPardonForm &operator=(PresidentialPardonForm  const &src);

@@ -6,16 +6,16 @@
 /*   By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 04:48:27 by moduwole          #+#    #+#             */
-/*   Updated: 2023/11/03 11:23:01 by moduwole         ###   ########.fr       */
+/*   Updated: 2023/11/03 16:24:43 by moduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 # include <fstream>
 
-ShrubberyCreationForm::ShrubberyCreationForm() : AForm("SCF", 145, 137), _target("default target") {}
+ShrubberyCreationForm::ShrubberyCreationForm() : AForm("Shruberry Form", 145, 137), _target("default target") {}
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm("SCF", 145, 137),
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm("Shrubbery Form", 145, 137),
     _target(target) {}
 
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &obj) : AForm(obj),
@@ -23,12 +23,13 @@ ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &obj) :
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-    std::cout << "SCF is shredded" << std::endl;
+    std::cout << getName() << "Shrubbery Creation Form shredded" << std::endl;
 }
 
 ShrubberyCreationForm    & ShrubberyCreationForm::operator=(ShrubberyCreationForm const &obj)
 {
     this->_target = obj._target;
+    setSigned(obj.getSigned());
     return (*this);
 }
 
