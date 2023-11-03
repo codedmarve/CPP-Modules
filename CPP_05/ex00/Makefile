@@ -6,7 +6,7 @@
 #    By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/16 18:15:59 by moduwole          #+#    #+#              #
-#    Updated: 2023/10/23 19:19:59 by moduwole         ###   ########.fr        #
+#    Updated: 2023/11/03 08:34:41 by moduwole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRC	=	$(wildcard *.cpp)
 OBJ	=	$(SRC:.cpp=.o)
 
 CC	=	c++
-CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+CFLAGS	=	-Wall -Wextra -Werror -std=c++98 -pedantic
 
 
 all: $(NAME)

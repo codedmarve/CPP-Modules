@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationFor.cpp                           :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 04:48:27 by moduwole          #+#    #+#             */
-/*   Updated: 2023/10/31 00:23:48 by moduwole         ###   ########.fr       */
+/*   Updated: 2023/11/03 11:23:01 by moduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ std::string     ShrubberyCreationForm::getTarget() const
 
 void    ShrubberyCreationForm::executeForm(void) const
 {
-    std::ofstream   o_file(getTarget() + "_shrubbery");
+    std::ofstream   o_file((getTarget() + "_shrubbery").c_str());
     o_file  << "                                                  ." << std::endl;
     o_file << "                                              .         ;" << std::endl;
     o_file << "                 .              .              ;%     ;;" << std::endl;
