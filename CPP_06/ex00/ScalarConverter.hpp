@@ -6,7 +6,7 @@
 /*   By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 02:17:49 by moduwole          #+#    #+#             */
-/*   Updated: 2023/11/06 02:30:33 by moduwole         ###   ########.fr       */
+/*   Updated: 2023/11/07 01:42:18 by moduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 #include <cctype> // For std::isprint
 #include <cstdlib> // For std::atof
 #include <limits> // For numeric_limits
-// #include <cfloat> // for DBL_MIN, DBL_MAX
-#include <climits> //max_min
+#include <climits> // max_min
 #include <cmath> // fmod
 
 enum type
