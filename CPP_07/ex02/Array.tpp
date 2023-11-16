@@ -6,7 +6,7 @@
 /*   By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:39:50 by moduwole          #+#    #+#             */
-/*   Updated: 2023/11/14 16:18:09 by moduwole         ###   ########.fr       */
+/*   Updated: 2023/11/16 23:00:22 by moduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ template <typename T>
 Array<T> &Array<T>::operator=(Array const &obj)
 {
     std::cout << "copy assignment operator called" << std::endl;
-    this->_size = obj.size;
+    this->_size = obj.size();
     if (_array)
         delete[] _array;
     this->_array = new T[this->_size];
@@ -64,7 +64,8 @@ T   &Array<T>::operator[](unsigned int index)
 }
 
 template <typename T>
-unsigned int    Array<T>::size(void) {
+unsigned int    Array<T>::size(void) const
+{
 	return (this->_size);
 }
 

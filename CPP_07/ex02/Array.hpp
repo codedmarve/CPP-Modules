@@ -6,7 +6,7 @@
 /*   By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 12:42:00 by moduwole          #+#    #+#             */
-/*   Updated: 2023/11/14 15:40:40 by moduwole         ###   ########.fr       */
+/*   Updated: 2023/11/16 23:00:18 by moduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ public:
     Array   &operator=(Array const &obj);
     T       &operator[](unsigned int index);
 
-    unsigned int    size(void);
+    unsigned int    size(void) const;
     void            print(void);
     
     class OutOfRangeException : public std::exception

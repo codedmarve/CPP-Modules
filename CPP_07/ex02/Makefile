@@ -6,7 +6,7 @@
 #    By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/14 16:19:53 by moduwole          #+#    #+#              #
-#    Updated: 2023/11/14 16:20:16 by moduwole         ###   ########.fr        #
+#    Updated: 2023/11/16 18:32:48 by moduwole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(SRC)
 	$(CC) $(OBJ) -o $(NAME)
 
 %.o: %.cpp
