@@ -6,7 +6,7 @@
 /*   By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 00:08:59 by moduwole          #+#    #+#             */
-/*   Updated: 2023/11/21 16:56:42 by moduwole         ###   ########.fr       */
+/*   Updated: 2023/11/26 01:38:28 by moduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int Span::shortestSpan()
     std::sort(sorted.begin(), sorted.end());
     std::vector<int>	difference(this->_vec.size());
     std::adjacent_difference(sorted.begin(), sorted.end(), difference.begin());
-	spanMin = *std::min_element((difference.begin()), difference.end());
+	spanMin = *std::min_element(++(difference.begin()), difference.end());
 	return (spanMin);
 }
 
@@ -84,20 +84,36 @@ void Span::fillConsecutiveNumbers()
 void Span::fillRandomNumbers() {
     std::vector<int> randomNumbers(_N);
     srand(time(NULL));
-    for (unsigned int i = 0; i < _N; i++)
+    unsigned int    i = 0;
+    int     element;
+
+    while (i < _N)
     {
-        randomNumbers[i] = rand();
+        element = rand() % (_N * 100);
+        if (std::find(randomNumbers.begin(), randomNumbers.end(), element)
+            == randomNumbers.end())
+        {
+            randomNumbers[i] = element;
+            i++;
+        }
     }
     addRange(randomNumbers.begin(), randomNumbers.end());
 }
 
 void    Span::printElements() {
 	int idx = 0;
-    for(std::vector<int>::iterator it = _vec.begin(); it != _vec.end(); it++)
+    if (_vec.empty())
+        std::cout << "Seems Vector is empty\n";
+    else
     {
-		std::cout << "ELEMENT " << idx << "	" << *it << std::endl;
-		idx++;
-	}
+        std::cout << "Vector elements:\n";
+        for(std::vector<int>::iterator it = _vec.begin(); it != _vec.end(); it++)
+        {
+            std::cout << *it << " ";
+            idx++;
+        }
+        std::cout << std::endl;
+    }
 }
 
 const char *Span::MaxSizeException::what() const throw()
