@@ -6,7 +6,7 @@
 /*   By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 02:15:48 by moduwole          #+#    #+#             */
-/*   Updated: 2023/11/26 18:27:06 by moduwole         ###   ########.fr       */
+/*   Updated: 2023/11/26 18:50:53 by moduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class MutantStack : public std::stack <T> {
 public:
     MutantStack() {};
     ~MutantStack() {};
-    // MutantStack(const MutantStack &that) : std::stack<T>(that) {};
+    MutantStack(const MutantStack &that) : std::stack<T>(that) {};
     
     MutantStack &operator=(const MutantStack &obj) {
         if (this != &obj)

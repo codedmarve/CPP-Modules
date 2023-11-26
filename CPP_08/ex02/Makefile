@@ -6,11 +6,11 @@
 #    By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/26 18:23:48 by moduwole          #+#    #+#              #
-#    Updated: 2023/11/26 18:24:04 by moduwole         ###   ########.fr        #
+#    Updated: 2023/11/26 18:52:29 by moduwole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	scan
+NAME	=	mutantStack
 
 SRC	=	$(wildcard *.cpp)
 OBJ	=	$(SRC:.cpp=.o)
