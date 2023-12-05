@@ -6,7 +6,7 @@
 /*   By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 17:23:06 by moduwole          #+#    #+#             */
-/*   Updated: 2023/12/05 02:58:50 by moduwole         ###   ########.fr       */
+/*   Updated: 2023/12/05 03:08:22 by moduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,9 +141,9 @@ bool    BitcoinExchange::checkValue(std::string line)
     double value = std::atof(line.c_str());
 
     if ((!value && line.substr(0, 1) != "0") || value < 0)
-		return (std::cout << "Error: not a positive integer", false);
+		return (std::cout << "Error: not a positive integer.", false);
     if (value > 1000)
-		return (std::cout << "Error: too large a number", false);
+		return (std::cout << "Error: too large a number.", false);
     return true;
 }
 
