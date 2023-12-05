@@ -6,7 +6,7 @@
 /*   By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 18:25:32 by moduwole          #+#    #+#             */
-/*   Updated: 2023/12/04 01:45:09 by moduwole         ###   ########.fr       */
+/*   Updated: 2023/12/05 03:00:08 by moduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,5 @@ int main(int argc, char **argv)
         return ((std::cerr << "Usage: " << argv[0] << " <filename.csv>\n"), 1);
     
 	BitcoinExchange btc("data.csv", argv[1]);
+    return 0;
 }
